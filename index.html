@@ -26,10 +26,12 @@
         </ul>
       </nav>
     </div>
-    <h1 class="title">Блог о творчестве, спорте,<br>и образе жизни</h1>
+    <h1 class="title">Блог о творчестве, спорте, и образе жизни</h1>
   </header>
   <section class="trends">
-    <h3 class="h3-block-title">Сейчас в тренде</h3>
+    <div class="trends-title">
+      <h3 class="h3-block-title">Сейчас в тренде</h3>
+    </div>
     <div class="trends-block" id="trends-block-mobile">
       <article class="trend-card trend-card-first">
         <div class="trend-content">
@@ -149,7 +151,7 @@
     </main>
     <aside class="side-bar">
       <section class="latest-posts">
-        <h3 class="side-bar-title">Новые посты</h3>
+        <h3 class="h3-block-title">Новые посты</h3>
         <div class="latest-posts-list">
           <div class="latest-post">
             <img src="images/2.jpg" class="latest-post-image" alt="Картинка">
@@ -198,7 +200,7 @@
         </form>
       </div>
       <section class="subscribe">
-        <h3 class="side-bar-title">Рассылка</h3>
+        <h3 class="h3-block-title">Рассылка</h3>
         <form class="subscribe-form">
           <span class="subscribe-form-description visually-hidden">Поле ввода электронной почты для оформления подписки</span>
           <input class="email-field" type="email" placeholder="Ваш email-адрес">
@@ -206,7 +208,7 @@
         </form>
       </section>
       <section class="tags">
-        <h3 class="side-bar-title">Теги</h3>
+        <h3 class="h3-block-title">Теги</h3>
         <ul class="tags-list">
           <li class="tag-item"><a href="#0" class="tag-item-link">Fashion</a></li>
           <li class="tag-item"><a href="#0" class="tag-item-link">music</a></li>
@@ -219,20 +221,28 @@
         </ul>
       </section>
       <section class="topic-set">
-        <h3 class="side-bar-title">Темы</h3>
+        <h3 class="h3-block-title">Темы</h3>
         <ul class="topic-list">
           <li class="topic-item"><a href="#0" class="topic-item-link">Красота</a><span class="quantity">12</span></li>
+          <hr size="1px" color="#eeeeee"/>
           <li class="topic-item"><a href="#0" class="topic-item-link">Здоровье</a><span class="quantity">4</span></li>
+          <hr size="1px" color="#eeeeee"/>
           <li class="topic-item"><a href="#0" class="topic-item-link">Образ жизни</a><span class="quantity">145</span></li>
+          <hr size="1px" color="#eeeeee"/>
           <li class="topic-item"><a href="#0" class="topic-item-link">Музыка</a><span class="quantity">28</span></li>
+          <hr size="1px" color="#eeeeee"/>
           <li class="topic-item"><a href="#0" class="topic-item-link">Спорт</a><span class="quantity">62</span></li>
+          <hr size="1px" color="#eeeeee"/>
           <li class="topic-item"><a href="#0" class="topic-item-link">Йога</a><span class="quantity">8</span></li>
+          <hr size="1px" color="#eeeeee"/>
         </ul>
       </section>
     </aside>
   </div>
   <div class="our-products" id="our-products-mobile">
-    <h3 class="h3-block-title">Наши изделия</h3>
+    <div class="products-title">
+      <h3 class="h3-block-title">Наши изделия</h3>
+    </div>
     <div class="products-list" id="products-list-mobile">
       <article class="product-card">
         <picture class="product-image-container">
@@ -309,9 +319,9 @@
         </li>
       </ul>
     </address>
-    <a href="#0" class="copyright">Copyright © 2009–2019 City Blog LLC.</a>
+    <a href="#feedback_popup" class="copyright">Copyright © 2009–2019 City Blog LLC.</a>
   </footer>
-  <div class="popup popup_hidden">
+  <div class="popup popup-hidden" id="feedback_popup">
     <div class="popup-body">
       <div class="popup-content">
         <a href="" class="popup-close"><svg class="close-image" xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 441 441">
@@ -329,12 +339,12 @@
             <option>Несколько раз в год</option>
           </select>
           <p class="subscription-question" id="second-question">Вы подписаны на e-mail рассылку?</p>
-          <label class="label">
-            <input type="radio" class="radio" name="subscription-availability">
+          <label class="label" id="radio-yes">
+            <input type="radio" checked class="radio" name="subscription-availability">
             <span class="style-of-btn"></span>
             <span class="text">Да</span>
           </label>
-          <label class="label">
+          <label class="label" id="radio-no">
             <input type="radio" class="radio" name="subscription-availability">
             <span class="style-of-btn"></span>
             <span class="text">Нет</span>
